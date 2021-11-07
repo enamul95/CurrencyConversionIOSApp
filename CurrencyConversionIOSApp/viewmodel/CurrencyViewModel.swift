@@ -21,7 +21,6 @@ class CurrencyViewModel{
             if let data = response.data {
                 do{
                     let resposne = try JSONDecoder().decode(CurrencyResponse.self, from: data)
-                    print("resposne-->",resposne)
                     self.currencyDelegate?.getCurrrency(currencyResponse: resposne)
                     
                     

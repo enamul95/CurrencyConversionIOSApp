@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A5190E9273841F500E316DA /* DBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5190E8273841F500E316DA /* DBController.swift */; };
+		9A5190EC2738428B00E316DA /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5190EB2738428B00E316DA /* CurrencyModel.swift */; };
 		C0557177C459D64AC9CD56B3 /* Pods_CurrencyConversionIOSApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E706AD9373C86FD2F97598 /* Pods_CurrencyConversionIOSApp.framework */; };
 		F4C4BF60273791B200DB13E8 /* Custom_Sweet_alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C4BF5F273791B200DB13E8 /* Custom_Sweet_alert.swift */; };
 		F4C4BF622737937D00DB13E8 /* CurrencyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C4BF612737937D00DB13E8 /* CurrencyProtocol.swift */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		16558D149ED110C8895AB002 /* Pods-CurrencyConversionIOSApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyConversionIOSApp.release.xcconfig"; path = "Target Support Files/Pods-CurrencyConversionIOSApp/Pods-CurrencyConversionIOSApp.release.xcconfig"; sourceTree = "<group>"; };
+		9A5190E8273841F500E316DA /* DBController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBController.swift; sourceTree = "<group>"; };
+		9A5190EB2738428B00E316DA /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		9E7B081B70FD5D42850148B0 /* Pods-CurrencyConversionIOSApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyConversionIOSApp.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyConversionIOSApp/Pods-CurrencyConversionIOSApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A7E706AD9373C86FD2F97598 /* Pods_CurrencyConversionIOSApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyConversionIOSApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C4BF5F273791B200DB13E8 /* Custom_Sweet_alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_Sweet_alert.swift; sourceTree = "<group>"; };
@@ -79,6 +83,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9A5190EA2738425400E316DA /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				9A5190E8273841F500E316DA /* DBController.swift */,
+				9A5190EB2738428B00E316DA /* CurrencyModel.swift */,
+			);
+			path = coreData;
+			sourceTree = "<group>";
+		};
 		F4F0338D273785D7004D685C = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +113,7 @@
 		F4F03398273785D7004D685C /* CurrencyConversionIOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				9A5190EA2738425400E316DA /* coreData */,
 				F4F033BA27378EF3004D685C /* library */,
 				F4F033B927378EB9004D685C /* protocol */,
 				F4F033B827378EA9004D685C /* viewmodel */,
@@ -281,6 +295,7 @@
 				F4C4BF66273798E700DB13E8 /* CurrencyViewModel.swift in Sources */,
 				F4F0339A273785D7004D685C /* AppDelegate.swift in Sources */,
 				F4F033A4273785D7004D685C /* CurrencyConversionIOSApp.xcdatamodeld in Sources */,
+				9A5190EC2738428B00E316DA /* CurrencyModel.swift in Sources */,
 				F4C4BF64273793CB00DB13E8 /* CurrencyResponse.swift in Sources */,
 				F4F033B327378D50004D685C /* IpConfig.swift in Sources */,
 				F4F0339C273785D7004D685C /* SceneDelegate.swift in Sources */,
@@ -289,6 +304,7 @@
 				F4C4BF622737937D00DB13E8 /* CurrencyProtocol.swift in Sources */,
 				F4C4BF60273791B200DB13E8 /* Custom_Sweet_alert.swift in Sources */,
 				F4F033B727378DD7004D685C /* Constants.swift in Sources */,
+				9A5190E9273841F500E316DA /* DBController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E7B081B70FD5D42850148B0 /* Pods-CurrencyConversionIOSApp.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -462,6 +479,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 16558D149ED110C8895AB002 /* Pods-CurrencyConversionIOSApp.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;

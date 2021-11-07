@@ -12,5 +12,6 @@ class Constants{
         static var access_key = "0b3471b49fd30569f3fe054d1a6dd38b"
         static var source = "USD"
         static var format = "1"
+        static var tableName = "CURRENCY"
     }
 }
