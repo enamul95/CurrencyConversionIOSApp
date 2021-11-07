@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		C0557177C459D64AC9CD56B3 /* Pods_CurrencyConversionIOSApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E706AD9373C86FD2F97598 /* Pods_CurrencyConversionIOSApp.framework */; };
 		F4C4BF60273791B200DB13E8 /* Custom_Sweet_alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C4BF5F273791B200DB13E8 /* Custom_Sweet_alert.swift */; };
+		F4C4BF622737937D00DB13E8 /* CurrencyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C4BF612737937D00DB13E8 /* CurrencyProtocol.swift */; };
+		F4C4BF64273793CB00DB13E8 /* CurrencyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C4BF63273793CB00DB13E8 /* CurrencyResponse.swift */; };
+		F4C4BF66273798E700DB13E8 /* CurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C4BF65273798E700DB13E8 /* CurrencyViewModel.swift */; };
+		F4C4BF682737A10D00DB13E8 /* Custom_Progress_bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C4BF672737A10D00DB13E8 /* Custom_Progress_bar.swift */; };
+		F4C4BF6A2737A26800DB13E8 /* CheckNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C4BF692737A26800DB13E8 /* CheckNetwork.swift */; };
 		F4F0339A273785D7004D685C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F03399273785D7004D685C /* AppDelegate.swift */; };
 		F4F0339C273785D7004D685C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F0339B273785D7004D685C /* SceneDelegate.swift */; };
 		F4F0339E273785D7004D685C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F0339D273785D7004D685C /* ViewController.swift */; };
@@ -26,6 +31,11 @@
 		9E7B081B70FD5D42850148B0 /* Pods-CurrencyConversionIOSApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyConversionIOSApp.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyConversionIOSApp/Pods-CurrencyConversionIOSApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A7E706AD9373C86FD2F97598 /* Pods_CurrencyConversionIOSApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyConversionIOSApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C4BF5F273791B200DB13E8 /* Custom_Sweet_alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_Sweet_alert.swift; sourceTree = "<group>"; };
+		F4C4BF612737937D00DB13E8 /* CurrencyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyProtocol.swift; sourceTree = "<group>"; };
+		F4C4BF63273793CB00DB13E8 /* CurrencyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyResponse.swift; sourceTree = "<group>"; };
+		F4C4BF65273798E700DB13E8 /* CurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewModel.swift; sourceTree = "<group>"; };
+		F4C4BF672737A10D00DB13E8 /* Custom_Progress_bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_Progress_bar.swift; sourceTree = "<group>"; };
+		F4C4BF692737A26800DB13E8 /* CheckNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckNetwork.swift; sourceTree = "<group>"; };
 		F4F03396273785D7004D685C /* CurrencyConversionIOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConversionIOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F03399273785D7004D685C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4F0339B273785D7004D685C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +104,7 @@
 				F4F033B927378EB9004D685C /* protocol */,
 				F4F033B827378EA9004D685C /* viewmodel */,
 				F4F033B127378D2E004D685C /* util */,
-				F4F033B027378D21004D685C /* responseModel */,
+				F4F033B027378D21004D685C /* response */,
 				F4F03399273785D7004D685C /* AppDelegate.swift */,
 				F4F0339B273785D7004D685C /* SceneDelegate.swift */,
 				F4F0339D273785D7004D685C /* ViewController.swift */,
@@ -107,11 +117,12 @@
 			path = CurrencyConversionIOSApp;
 			sourceTree = "<group>";
 		};
-		F4F033B027378D21004D685C /* responseModel */ = {
+		F4F033B027378D21004D685C /* response */ = {
 			isa = PBXGroup;
 			children = (
+				F4C4BF63273793CB00DB13E8 /* CurrencyResponse.swift */,
 			);
-			path = responseModel;
+			path = response;
 			sourceTree = "<group>";
 		};
 		F4F033B127378D2E004D685C /* util */ = {
@@ -120,6 +131,8 @@
 				F4F033B227378D50004D685C /* IpConfig.swift */,
 				F4F033B627378DD7004D685C /* Constants.swift */,
 				F4C4BF5F273791B200DB13E8 /* Custom_Sweet_alert.swift */,
+				F4C4BF672737A10D00DB13E8 /* Custom_Progress_bar.swift */,
+				F4C4BF692737A26800DB13E8 /* CheckNetwork.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -127,6 +140,7 @@
 		F4F033B827378EA9004D685C /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
+				F4C4BF65273798E700DB13E8 /* CurrencyViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -134,6 +148,7 @@
 		F4F033B927378EB9004D685C /* protocol */ = {
 			isa = PBXGroup;
 			children = (
+				F4C4BF612737937D00DB13E8 /* CurrencyProtocol.swift */,
 			);
 			path = protocol;
 			sourceTree = "<group>";
@@ -261,12 +276,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C4BF6A2737A26800DB13E8 /* CheckNetwork.swift in Sources */,
 				F4F0339E273785D7004D685C /* ViewController.swift in Sources */,
+				F4C4BF66273798E700DB13E8 /* CurrencyViewModel.swift in Sources */,
 				F4F0339A273785D7004D685C /* AppDelegate.swift in Sources */,
 				F4F033A4273785D7004D685C /* CurrencyConversionIOSApp.xcdatamodeld in Sources */,
+				F4C4BF64273793CB00DB13E8 /* CurrencyResponse.swift in Sources */,
 				F4F033B327378D50004D685C /* IpConfig.swift in Sources */,
 				F4F0339C273785D7004D685C /* SceneDelegate.swift in Sources */,
+				F4C4BF682737A10D00DB13E8 /* Custom_Progress_bar.swift in Sources */,
 				F4F033BC27378FB0004D685C /* SweetAlert.swift in Sources */,
+				F4C4BF622737937D00DB13E8 /* CurrencyProtocol.swift in Sources */,
 				F4C4BF60273791B200DB13E8 /* Custom_Sweet_alert.swift in Sources */,
 				F4F033B727378DD7004D685C /* Constants.swift in Sources */,
 			);
