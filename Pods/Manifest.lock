@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (5.0.5)
+  - IQKeyboardManagerSwift (6.5.6)
+  - PKHUD (5.3.0)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0.0-rc.3)
+  - IQKeyboardManagerSwift
+  - PKHUD (~> 5.0)
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - IQKeyboardManagerSwift
+    - PKHUD
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: 4d629b76b55eb54ae7d8daff8bc59ad21b1306f2
+
+COCOAPODS: 1.11.2
