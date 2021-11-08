@@ -9,7 +9,7 @@ import Foundation
 import PKHUD
 class Custom_Progress_bar {
     
-     static var progress_bar_time_out = 60
+    static var progress_bar_time_out = 60
     static func showProgressDialog(){
         //HUD.show(.progress,onView: view)
         HUD.show(.progress)

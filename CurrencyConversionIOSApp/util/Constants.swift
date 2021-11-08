@@ -13,5 +13,6 @@ class Constants{
         static var source = "USD"
         static var format = "1"
         static var tableName = "CURRENCY"
+        static var refreshTime:Double = 60*30 //second
     }
 }

@@ -10,8 +10,8 @@ import Foundation
 
 class IpConfig {
     
-     public static func getIP() -> String {
+    public static func getIP() -> String {
         return "http://api.currencylayer.com/"
-    
+        
     }
 }

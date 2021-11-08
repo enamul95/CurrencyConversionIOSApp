@@ -10,7 +10,7 @@ import Foundation
 class Custom_Sweet_alert{
     
     
-    static func show_error_message(messsage: String?){
+    static func showWarning(messsage: String?){
         
         SweetAlert().showAlert("Attention!", subTitle: messsage, style: AlertStyle.warning)
         

@@ -13,10 +13,11 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     @IBOutlet weak var dpCurrency: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var lbConversionAmount: UILabel!
     var currencyViewModel = CurrencyViewModel()
     
     var pickerArray = ["USD","AED","AFN","CAD","BDT","EUR","HKD","ISK","PHP","DKK","HUF","CZK","AUD","RON","SEK","IDR","INR","BRL","RUB","HRK","JPY","THB","CHF","SGD","PLN","BGN","CNY","NOK","NZD","ZAR","USD","MXN","ILS","GBP","KRW","MYR"]
- 
+    
     var selectedRow = 0;
     let picker = UIPickerView()
     
@@ -37,25 +38,30 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         if(CheckNetwork.isOnline() == false){
             Custom_Sweet_alert.show_internet_connection()
         }else{
-            //  getCurrrency()
+            if(DBController.isFetchData() == false){
+                getCurrrency()
+            }
         }
-        
-        var model =  DBController.getCurrency(currecyCode: "USDBDT")
-        print(model.currecyRate)
-        print(model.currecyCode)
-        print(model.from)
-        print(model.to)
-        
+      
         dpCurrency.rightViewMode = UITextField.ViewMode.always
         let imageView = UIImageView(frame: CGRect(x: 5, y: 5, width: 30, height: 30))
         let image = UIImage(named: "arrow")
         imageView.image = image
         dpCurrency.rightView = imageView
-        
-        
         pickerDoneButton()
+        
+        Timer.scheduledTimer(timeInterval:TimeInterval(Constants.globalVariable.refreshTime), target: self, selector: #selector(ViewController.refreshApi), userInfo: nil, repeats: true)
     }
     
+    @objc func refreshApi()
+    {
+        print("refresh api")
+        if(CheckNetwork.isOnline() == false){
+            Custom_Sweet_alert.show_internet_connection()
+        }else{
+            getCurrrency()
+        }
+    }
     
     //begin Picker view
     
@@ -111,7 +117,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     //end picker view
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-      
+        
         return pickerArray.count
     }
     
@@ -122,23 +128,29 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-      //  let  cell = collectionView.cellForItem(at: indexPath) as! CollectionViewCell
-        var currency = pickerArray[indexPath.row]
-        print(currency)
-    }
-    func getCurrrency(currencyResponse: CurrencyResponse) {
-        Custom_Progress_bar.hide()
+        var conversiontCurrency = pickerArray[indexPath.row]
         
-        for currency in currencyResponse.quotes!  {
-            if(currency.key.count>3){
-                self.saveCurrency(key: currency.key,value: currency.value)
-            }
+        if(txtAmount.text! == ""){
+            Custom_Sweet_alert.showWarning(messsage: "Please Enter Amount")
+        }else if(dpCurrency.text == ""){
+            Custom_Sweet_alert.showWarning(messsage: "Please Select Currency")
+        }else{
+            self.calcuateCurrency(conversiontCurrency:conversiontCurrency)
         }
+    }
+    func calcuateCurrency(conversiontCurrency:String){
+        let currencyCode = dpCurrency.text!+conversiontCurrency
+        let model =  DBController.getCurrency(currecyCode:currencyCode)
+        let amount = Double(txtAmount.text!)
+        let conversionAmout = amount!*model.currecyRate
+        let conversionAmoutString = String(format: "$%.02f", conversionAmout)
+        lbConversionAmount.text = conversionAmoutString
         
     }
     
     func saveCurrency(key:String,value:Double){
-        var model = CurrencyModel()
+        
+        let model = CurrencyModel()
         let from:String = String(key.prefix(3))
         let to:String = String(key.suffix(3))
         model.currecyCode = key
@@ -147,6 +159,19 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         model.currecyRate = value
         DBController.saveCurrency(model: model)
     }
+    
+    
+    func getCurrrency(currencyResponse: CurrencyResponse) {
+        Custom_Progress_bar.hide()
+        DBController.deleteCurrency()
+        for currency in currencyResponse.quotes!  {
+            if(currency.key.count>3){
+                self.saveCurrency(key: currency.key,value: currency.value)
+            }
+        }
+        
+    }
+    
     
     func error(errorFrom: String, error: LocalizedError) {
         Custom_Progress_bar.hide()

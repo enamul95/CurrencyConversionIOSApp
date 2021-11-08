@@ -63,7 +63,7 @@ class DBController{
                 if let v_currecyRate = data.value(forKey: "currecyRate") as? Double {
                     currecyRate = v_currecyRate
                 }
-           
+                
                 model.currecyCode = currecyCode
                 model.from = from
                 model.to = to
@@ -77,5 +77,39 @@ class DBController{
         
         return model
     }
+    
+    static func deleteCurrency(){
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.globalVariable.tableName)
+        fetchRequest.returnsObjectsAsFaults = false
+        do {
+            let arrUsrObj = try managedContext.fetch(fetchRequest)
+            for usrObj in arrUsrObj as! [NSManagedObject] { // Fetching Object
+                managedContext.delete(usrObj) // Deleting Object
+            }
+            try managedContext.save()
+            
+        } catch let error as NSError {
+            print("error",error)
+        }
+    }
+    
+    static func isFetchData()-> Bool {
+        var results: [NSManagedObject] = []
+        do {
+            let appDelegate =  UIApplication.shared.delegate as? AppDelegate;
+            let managedContext = appDelegate!.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Constants.globalVariable.tableName)
+            results = try managedContext.fetch(fetchRequest)
+            
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        print("count-->",results.count)
+        return results.count > 0
+    }
+    
     
 }

@@ -6,8 +6,8 @@
 //
 
 import Foundation
-
 import SystemConfiguration
+
 public class CheckNetwork {
     
     class func isOnline() -> Bool {
