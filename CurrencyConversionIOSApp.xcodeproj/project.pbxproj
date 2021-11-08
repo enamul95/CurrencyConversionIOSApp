@@ -10,6 +10,8 @@
 		9A5190E9273841F500E316DA /* DBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5190E8273841F500E316DA /* DBController.swift */; };
 		9A5190EC2738428B00E316DA /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5190EB2738428B00E316DA /* CurrencyModel.swift */; };
 		C0557177C459D64AC9CD56B3 /* Pods_CurrencyConversionIOSApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E706AD9373C86FD2F97598 /* Pods_CurrencyConversionIOSApp.framework */; };
+		F4C237FF2738E40E0078EE99 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C237FE2738E40E0078EE99 /* CollectionViewCell.swift */; };
+		F4C238012738EEE00078EE99 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C238002738EEE00078EE99 /* CardView.swift */; };
 		F4C4BF60273791B200DB13E8 /* Custom_Sweet_alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C4BF5F273791B200DB13E8 /* Custom_Sweet_alert.swift */; };
 		F4C4BF622737937D00DB13E8 /* CurrencyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C4BF612737937D00DB13E8 /* CurrencyProtocol.swift */; };
 		F4C4BF64273793CB00DB13E8 /* CurrencyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C4BF63273793CB00DB13E8 /* CurrencyResponse.swift */; };
@@ -34,6 +36,8 @@
 		9A5190EB2738428B00E316DA /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		9E7B081B70FD5D42850148B0 /* Pods-CurrencyConversionIOSApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyConversionIOSApp.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyConversionIOSApp/Pods-CurrencyConversionIOSApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A7E706AD9373C86FD2F97598 /* Pods_CurrencyConversionIOSApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyConversionIOSApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4C237FE2738E40E0078EE99 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		F4C238002738EEE00078EE99 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		F4C4BF5F273791B200DB13E8 /* Custom_Sweet_alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_Sweet_alert.swift; sourceTree = "<group>"; };
 		F4C4BF612737937D00DB13E8 /* CurrencyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyProtocol.swift; sourceTree = "<group>"; };
 		F4C4BF63273793CB00DB13E8 /* CurrencyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyResponse.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 				F4F03399273785D7004D685C /* AppDelegate.swift */,
 				F4F0339B273785D7004D685C /* SceneDelegate.swift */,
 				F4F0339D273785D7004D685C /* ViewController.swift */,
+				F4C237FE2738E40E0078EE99 /* CollectionViewCell.swift */,
 				F4F0339F273785D7004D685C /* Main.storyboard */,
 				F4F033A5273785D8004D685C /* Assets.xcassets */,
 				F4F033A7273785D8004D685C /* LaunchScreen.storyboard */,
@@ -147,6 +152,7 @@
 				F4C4BF5F273791B200DB13E8 /* Custom_Sweet_alert.swift */,
 				F4C4BF672737A10D00DB13E8 /* Custom_Progress_bar.swift */,
 				F4C4BF692737A26800DB13E8 /* CheckNetwork.swift */,
+				F4C238002738EEE00078EE99 /* CardView.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -300,10 +306,12 @@
 				F4F033B327378D50004D685C /* IpConfig.swift in Sources */,
 				F4F0339C273785D7004D685C /* SceneDelegate.swift in Sources */,
 				F4C4BF682737A10D00DB13E8 /* Custom_Progress_bar.swift in Sources */,
+				F4C237FF2738E40E0078EE99 /* CollectionViewCell.swift in Sources */,
 				F4F033BC27378FB0004D685C /* SweetAlert.swift in Sources */,
 				F4C4BF622737937D00DB13E8 /* CurrencyProtocol.swift in Sources */,
 				F4C4BF60273791B200DB13E8 /* Custom_Sweet_alert.swift in Sources */,
 				F4F033B727378DD7004D685C /* Constants.swift in Sources */,
+				F4C238012738EEE00078EE99 /* CardView.swift in Sources */,
 				9A5190E9273841F500E316DA /* DBController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
