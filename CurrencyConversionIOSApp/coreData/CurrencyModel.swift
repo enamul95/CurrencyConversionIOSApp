@@ -12,4 +12,14 @@ class CurrencyModel {
     var from: String = ""
     var to:String = ""
     var currecyRate:Double = 0.00
+    init(){}
+    
+    init(currecyCode : String, from: String,to:String,currecyRate:Double) {
+        self.currecyCode = currecyCode
+        self.from = from
+        self.to = to
+        self.currecyRate = currecyRate
+        
+    }
+    
 }

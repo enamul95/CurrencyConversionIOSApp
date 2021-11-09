@@ -14,5 +14,7 @@ class Constants{
         static var format = "1"
         static var tableName = "CURRENCY"
         static var refreshTime:Double = 60*30 //second
+        static var amountEmptyMsg = "Please Enter Amount"
+        static var pickerEmptyMsg = "Please Select Currency"
     }
 }
